@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node bin/www.js",
-    "postinstall": "tsc",
-    "build": "gulp"
+    "postinstall": "tsc"
   },
   "dependencies": {
     "@azure/cosmos": "^2.0.0-4",
@@ -16,7 +15,8 @@
     "express": "^4.16.3",
     "hbs": "^4.0.1",
     "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "typescript": "^3.0.3"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.1",
@@ -25,7 +25,6 @@
     "@types/morgan": "^1.7.35",
     "@types/node": "^10.10.0",
     "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.3"
+    "tslint": "^5.11.0"
   }
 }
