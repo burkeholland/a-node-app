@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node bin/server.js"
+    "start": "node bin/server.js",
+    "postinstall": "tsc"
   },
   "dependencies": {
     "@azure/cosmos": "^2.0.0-4",
@@ -14,7 +15,8 @@
     "express": "^4.16.3",
     "hbs": "^4.0.1",
     "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "typescript": "^3.0.3"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.1",
