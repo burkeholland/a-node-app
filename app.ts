@@ -8,7 +8,6 @@ import * as favicon from 'serve-favicon';
 
 import index from './routes/index';
 import users from './routes/users';
-import api from './routes/api';
 
 const app = express();
 
@@ -26,7 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use((req: Request, res: Response, next: NextFunction) => {
@@ -42,14 +40,16 @@ interface Error {
 }
 
 // error handler
-app.use((err: Error, req: Request, res: Response) => {
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
+  console.log(`ERROR: ${err.message}`);
+
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', err);
 });
 
 export default app;
