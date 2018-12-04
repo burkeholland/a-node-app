@@ -1,5 +1,4 @@
-import * as errorHandler from 'errorhandler';
-import app from '../app';
+import app from '../src/app';
 
 /**
  * Start Express server.
